@@ -5,8 +5,8 @@
 
     <application
         android:label="@string/app_name"
-        android:theme="@style/Theme.CompassApp">
-
+        android:theme="@style/Theme.CompassApp"
+        android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
             android:exported="true">

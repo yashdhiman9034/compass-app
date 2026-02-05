@@ -22,7 +22,6 @@ import androidx.compose.foundation.background
 import android.os.Build
 import android.os.VibrationEffect
 import android.os.Vibrator
-import androidx.compose.ui.platform.LocalContext
 
 
 val AppleRed = Color(0xFFFF3B30)
@@ -202,10 +201,23 @@ fun CompassRing() {
 
 fun getDirection(deg: Int): String {
     return when (deg) {
-        in 315..360, in 0..44 -> "North"
-        in 45..134 -> "East"
-        in 135..224 -> "South"
-        else -> "West"
+        in 348..360, in 0..11 -> "N"
+        in 12..33 -> "NNE"
+        in 34..56 -> "NE"
+        in 57..78 -> "ENE"
+        in 79..101 -> "E"
+        in 102..123 -> "ESE"
+        in 124..146 -> "SE"
+        in 147..168 -> "SSE"
+        in 169..191 -> "S"
+        in 192..213 -> "SSW"
+        in 214..236 -> "SW"
+        in 237..258 -> "WSW"
+        in 259..281 -> "W"
+        in 282..303 -> "WNW"
+        in 304..326 -> "NW"
+        in 327..347 -> "NNW"
+        else -> "Unknown"
     }
 }
 
